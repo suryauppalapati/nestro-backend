@@ -13,8 +13,8 @@ class Hotel extends Model<InferAttributes<Hotel>, InferCreationAttributes<Hotel>
   declare name: string;
   declare address: string;
   declare location: string;
-  declare created_at: CreationOptional<Date>;
-  declare updated_at: CreationOptional<Date>;
+  declare createdAt: CreationOptional<Date>;
+  declare updatedAt: CreationOptional<Date>;
 }
 
 /**
@@ -41,11 +41,11 @@ Hotel.init(
       type: "STRING",
       allowNull: false,
     },
-    created_at: {
+    createdAt: {
       type: "DATE",
       defaultValue: new Date(),
     },
-    updated_at: {
+    updatedAt: {
       type: "DATE",
       defaultValue: new Date(),
     },
@@ -54,6 +54,7 @@ Hotel.init(
     sequelize,
     tableName: "nestro_hotels",
     underscored: true, // Use snake_case for column names
+    timestamps: true, // Automatically manage createdAt and updatedAt fields
   }
 );
 
