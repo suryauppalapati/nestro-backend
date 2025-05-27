@@ -4,7 +4,7 @@ const config = {
   NODE_PORT: process.env.NODE_PORT,
   NODE_ENV: process.env.NODE_ENV,
 
-  /* DB Config */
+  // DB Config
   DB_HOST: process.env.DB_HOST || "localhost",
   DB_USER: process.env.DB_USER || "root",
   DB_PASSWORD: process.env.DB_PASSWORD || "toor",
