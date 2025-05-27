@@ -4,6 +4,7 @@ import dailyFileRotate from "winston-daily-rotate-file";
 
 const { json, printf, combine, timestamp, colorize } = winston.format;
 
+// Configures and exports a Winston logger instance with environment-specific formatting and transports.
 const logger = winston.createLogger({
   format:
     process.env.NODE_ENV === "production"
